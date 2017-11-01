@@ -1,0 +1,39 @@
+Sequenses are available as sff-files and can be extracted from the european nucleotide archive (ENA): 
+Primary accesion number: PRJEB11841
+Secondary accesion number: ERP013257
+Forward and reverse read information can be extracted from the supplementary information (mapping_file.txt)
+
+Processing of raw sequence data in mothur v. 1.36.1 [34] based on the MiSeq SOP [35] 
+(date of access: 08/29/2015) 
+
+- assemble.paired (version 1.26.0)
+- screen.seqs (version 1.23.0; start: 11; criteria 97; optimize: minlength maxlength)
+- chop.seqs (version 1.19.0; numbases: 280; keep: back)
+- unique.seqs (version 1.20.0)
+- align.seqs (version 1.19.0; reference: Silva V119 V4; ksize: 8)
+- screen.seqs (version 1.23.0; maxhomop: 8; criteria: 97; optimize:start, end)
+- filter.seqs (version 1.19.0)
+- unique.ses (version 1.20.0)
+- pre.cluster (version 1.23.0)
+- chimera.uchime (version 1.22.0)
+- remove.seqs (version 1.20.0)
+- clasify.seqs (version 1.21.0; reference: trainset 14; taxonomy: trainset 14; ksize 8; iters: 100; cutoff: 80)
+- remove.lineage (version 1.20.0; taxon- Select Taxons for filtering: Chloroplast-Mitochondria-unknown-Archaea-Eukaryota)
+- deunique.seqs (version 1.20.0)
+- split.groups (version 1.20.0)
+
+
+OTU-based alph- and beta-diversity analysis in QIIME v. 1.8.0 [38] 
+Analysis based on a de novo OTU picking strategy using pick_open_reference_otus.py. 
+Basic microbiota analysis was performed with QIIME’s diversity analysis workflow core_diversity_analysis.py. 
+Microbial diversity and richness was determined by observed species, chao1, PD whole tree and Simpson's index
+Differences were calculated using compare_alpha_diversity.py, based on a nonparametric two sample t-test and 999 Monte-Carlo permutations and bonferroni corrected multiple comparisons. 
+Taxonomic microbial similarities were calculated using the Bray-Curtis dissimilarity, the weighted and unweighted UniFrac distance metrics. 
+Differences were calculated with comparing_categegories.py using ANOSIM a nonparametric test using 999 permutations computing an R and a p-value.
+
+
+Identification of differentially abundant OTUs between groups with LEfSe v. 1.0 [41]
+Taxa differences and LDA scores (significantly discriminative features: LDA >2.0 , alpha value for the factorial Kruskal-Wallis test among classes and for the pairwise Wilcoxon test between subclasses >0.05, using all-against-all multi-class analysis) were calculated according to LEfSe.
+
+P-values below 0,05 were considered significant (P<0.05=*; P<0.01=**; P<0.001=***). 
+Presented values are always mean ± SEM if not indicated in another way.
